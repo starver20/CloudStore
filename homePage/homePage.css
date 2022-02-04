@@ -68,15 +68,23 @@
 
 .category-jersey {
   background-image: url(../assets/jersey1.jpg);
+  transition: all 0.5s;
 }
 
 .category-shoe {
   background-image: url(../assets/shoe.jpg);
+  transition: all 0.5s;
 }
 
 .category-shoe-link,
 .category-jersey-link {
   position: relative;
+  overflow: hidden;
+}
+
+.category-shoe:hover,
+.category-jersey:hover {
+  transform: scale(1.5);
 }
 
 .category-shoe-title,
