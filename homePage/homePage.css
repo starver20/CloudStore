@@ -1,0 +1,94 @@
+.main-content {
+  /* background-color: chocolate; */
+  min-height: calc(100vh - 50px);
+  max-width: 100vw;
+}
+
+.poster {
+  width: 90vw;
+  margin: auto;
+  position: relative;
+  text-align: right;
+}
+
+.poster img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.poster .quote {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: white;
+  font-size: var(--header-2);
+}
+
+.poster .title {
+  font-style: italic;
+  font-size: var(--header-3);
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.brand svg {
+  width: 30rem;
+}
+
+.tagline {
+  font-size: var(--header-1);
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.category {
+  width: 90%;
+  margin: 10rem auto;
+  height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-20);
+}
+
+.category-shoe,
+.category-jersey {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.category-jersey {
+  background-image: url(../assets/jersey1.jpg);
+}
+
+.category-shoe {
+  background-image: url(../assets/shoe.jpg);
+}
+
+.category-shoe-link,
+.category-jersey-link {
+  position: relative;
+}
+
+.category-shoe-title,
+.category-jersey-title {
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+  font-size: var(--header-2);
+  font-weight: 900;
+  color: black;
+}
+
+.category-jersey-title {
+  color: white;
+}
