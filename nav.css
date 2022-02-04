@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 440px) {
+  .navbar {
+    width: 90%;
+  }
+
   .nav-search {
     display: none;
   }
