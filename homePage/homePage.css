@@ -6,9 +6,10 @@
 
 .poster {
   width: 90vw;
-  margin: auto;
+  margin: 4rem auto;
   position: relative;
   text-align: right;
+  cursor: pointer;
 }
 
 .poster img {
@@ -22,6 +23,7 @@
   right: 2rem;
   color: white;
   font-size: var(--header-2);
+  width: 20%;
 }
 
 .poster .title {
@@ -38,12 +40,15 @@
 
 .brand svg {
   width: 30rem;
+  margin-left: auto;
 }
 
 .tagline {
   font-size: var(--header-1);
   font-size: 5rem;
   font-weight: 700;
+  flex-basis: 50%;
+  width: fit-content;
 }
 
 .category {
@@ -60,14 +65,13 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .category-jersey {
-  background-image: url(../assets/jersey1.jpg);
+  background-image: url(../assets/jersey.jpeg);
   transition: all 0.5s;
 }
 
@@ -87,16 +91,56 @@
   transform: scale(1.5);
 }
 
-.category-shoe-title,
-.category-jersey-title {
+.category-title {
   position: absolute;
-  bottom: 4rem;
-  left: 1rem;
-  font-size: var(--header-2);
+  font-size: var(--header-1);
   font-weight: 900;
   color: black;
 }
 
+.category-shoe-title,
 .category-jersey-title {
+  bottom: 4rem;
+  left: 1rem;
+}
+
+.category-kobe-title {
+  bottom: 2rem;
   color: white;
+  left: 1rem;
+}
+
+@media (max-width: 1400px) {
+  .poster .quote {
+    font-size: var(--header-3);
+  }
+}
+
+@media (max-width: 1024px) {
+  .category-title {
+    font-size: var(--header-2);
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 770px) {
+  /* .poster .quote {
+    font-size: var(--header-2);
+  } */
+}
+
+@media (max-width: 660px) {
+  .category-title {
+    font-size: var(--header-3);
+    font-weight: 900;
+  }
+  /* 
+  .poster .quote {
+    font-size: var(--header-2);
+  } */
+}
+@media (max-width: 440px) {
+  .poster .quote {
+    font-size: var(--body-2);
+  }
 }
