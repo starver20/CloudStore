@@ -1,6 +1,9 @@
 .header {
   max-width: 100vw;
   background-color: var(--background-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-icon {

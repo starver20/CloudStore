@@ -49,3 +49,25 @@
   margin: 0;
   font-family: 'Mulish', sans-serif;
 }
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+}
+@media (max-width: 770px) {
+  :root {
+    font-size: 40%;
+  }
+  .brand svg {
+    width: 50rem;
+  }
+}
+@media (max-width: 660px) {
+  :root {
+    font-size: 30%;
+  }
+  .brand svg {
+    width: 50rem;
+  }
+}
