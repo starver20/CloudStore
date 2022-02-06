@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./productListing.css" />
+    <link rel="stylesheet" href="../nav.css" />
+    <title>Products | CloudStore</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header">
+        <nav class="navbar">
+          <div class="nav-logo">CloudStore</div>
+          <div class="nav-search">
+            <input type="text" name="search" id="search" placeholder="Search" />
+          </div>
+          <div class="nav-action-container">
+            <div class="nav-action">
+              <a href="../auth/login/login.html">
+                <button class="nav--action__login">LOGIN</button>
+              </a>
+              <div class="nav-icon">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="nav-icon">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="main-content">
+        <aside>
+          <div class="filters">
+            <div class="filter-header">
+              <h1 class="filter-title">Filters</h1>
+              <button class="filter-clear">Clear</button>
+            </div>
+            <div class="filter-type">
+              <h2 class="filter-type-title">Ratings</h2>
+              <input
+                class="rating-range filter-type-inp"
+                type="range"
+                step="1"
+                min="1"
+                max="5"
+                name="rating"
+                id="rating-range"
+              />
+              <div class="ratings">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+            </div>
+            <div class="filter-type">
+              <h2 class="filter-type-title">Sort by price</h2>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="radio"
+                  name="price"
+                  id="price"
+                  checked
+                />
+                <label for="">Price low to high</label>
+              </div>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="radio"
+                  name="price"
+                  id="price"
+                />
+                <label for="">Price high to low</label>
+              </div>
+            </div>
+            <div class="filter-type">
+              <h2 class="filter-type-title">Categories</h2>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="checkbox"
+                  name="price"
+                  id="price"
+                />
+                <label for="">Men</label>
+              </div>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="checkbox"
+                  name="price"
+                  id="price"
+                />
+                <label for="">Women</label>
+              </div>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="checkbox"
+                  name="price"
+                  id="price"
+                />
+                <label for="">Sleeveless</label>
+              </div>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="checkbox"
+                  name="price"
+                  id="price"
+                />
+                <label for="">Slim</label>
+              </div>
+              <div class="inp-container">
+                <input
+                  class="filter-type-inp"
+                  type="checkbox"
+                  name="price"
+                  id="price"
+                />
+                <label for="">Standard</label>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <main>
+          <div class="filter-toggle">
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="prod-listing">
+            <div class="prod-card">
+              <div class="prod-img p1"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p2"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="red"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="0"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p3"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p4"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="red"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="0"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p5"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p6"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p7"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p8"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p9"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="prod-card">
+              <div class="prod-img p10"></div>
+              <div class="prod-details">
+                <h4 class="prod-name">Boston Celtics City Edition</h4>
+                <p class="prod-info">Nike Dri-FIT City Edition</p>
+                <p class="prod-price">₹6,495</p>
+              </div>
+              <button class="add-cart-btn">ADD TO CART</button>
+              <span class="fav"
+                ><svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>
