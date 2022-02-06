@@ -68,6 +68,7 @@
   font-size: var(--body-3);
   height: var(--spacing-28);
 }
+
 .nav--action__login:hover {
   background-color: var(--secondary-color);
   color: white;
