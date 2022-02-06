@@ -1,93 +1,13 @@
 .main-content {
-  display: flex;
   max-height: calc(100vh - 50px);
-  overflow: hidden;
+  width: 80%;
+  margin: auto;
 }
 
-.main-content aside {
-  padding-top: 5rem;
-  width: 260px;
-  transition: width 0.1s;
-  border-right: 1px solid var(--background-color);
-}
-
-.filters {
-  height: 60%;
-  padding: 2rem;
-}
-
-.filter-header {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  color: var(--primary-color);
-  margin-bottom: 5rem;
-}
-
-.filter-title {
-  font-size: var(--header-3);
-  font-weight: 700;
-}
-
-.filter-clear {
-  background: none;
-  border: none;
-  text-decoration: underline;
-  font-size: var(--body-3);
-  cursor: pointer;
-}
-
-.filter-type {
-  margin-bottom: 5rem;
-  text-align: left;
-}
-
-.filter-type-title {
-  margin-bottom: 1rem;
-  font-size: var(--body-2);
-  font-weight: 400;
-}
-
-.rating-range {
-  accent-color: var(--primary-color);
-  width: 100%;
-}
-
-.ratings {
-  margin-top: 0.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--body-4);
-}
-
-.inp-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  accent-color: var(--primary-color);
-  font-size: var(--body-4);
-}
-
-.inp-container input {
-  margin-right: 1rem;
-  cursor: pointer;
-  transform: scale(1.5);
-}
-
-/* Product Listing */
+/* Wishlist Product Listing */
 
 .main-content main {
   padding: 5rem 2rem;
-  flex: 1 0;
-  overflow-y: auto;
-}
-
-.filter-toggle {
-  width: 3rem;
-  margin: 2rem 0;
-  display: none;
-  cursor: pointer;
 }
 
 .prod-listing {
@@ -196,18 +116,4 @@
 }
 
 @media (max-width: 1200px) {
-  .main-content aside {
-    width: 0;
-    display: none;
-  }
-  .filter-toggle {
-    display: block;
-  }
-  .main-content main {
-    padding: 0 2rem 5rem;
-  }
-  .prod-listing {
-    width: 80%;
-    margin: auto;
-  }
 }
