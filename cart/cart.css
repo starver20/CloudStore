@@ -163,11 +163,10 @@
   justify-content: center;
   align-items: center;
   padding: 2px 4px 4px;
+  cursor:pointer;
 }
 
 .remv-cart-btn {
-  /* border: 1px solid var(--sub-text-color); */
-  /* background-color: var(--background-color); */
   background: none;
   border: none;
   font-size: var(--body-4);
