@@ -8,10 +8,13 @@
 }
 
 .nav-icon {
-  width: 2.8rem;
   margin-left: 2rem;
   cursor: pointer;
   position: relative;
+}
+
+.nav-icon > a > svg {
+  width: 2.8rem;
 }
 
 .icon-number {
