@@ -1,18 +1,18 @@
 .main-content {
   display: flex;
-  max-height: calc(100vh - 50px);
-  overflow: hidden;
 }
 
 .main-content aside {
   padding-top: 5rem;
   width: 260px;
-  transition: width 0.1s;
+  height: fit-content;
+  position: sticky;
+  top: 50px;
+  transition: width 0.5s;
   border-right: 1px solid var(--background-color);
 }
 
 .filters {
-  height: 60%;
   padding: 2rem;
 }
 
@@ -53,7 +53,6 @@
 .main-content main {
   padding: 5rem 2rem;
   flex: 1 0;
-  overflow-y: auto;
 }
 
 .filter-toggle {
@@ -104,6 +103,8 @@
 @media (max-width: 1200px) {
   .main-content aside {
     width: 0;
+  }
+  .filters {
     display: none;
   }
   .filter-toggle {
